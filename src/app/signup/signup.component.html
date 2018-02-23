@@ -14,6 +14,16 @@
             <label for="pwd">Confirm Password:</label>
             <input type="password" class="form-control" id="ConfirmPwd" placeholder="Enter password" name="confirmPwd" [(ngModel)]="confirmPwd" required>
         </div>
+        <div class="form-group">
+            <label for="activityType">Select Your Acitivity Type:</label>
+            <select name="activityType" id="activityType" [(ngModel)]="activityType">
+                            <option value="activity1">Activity1</option> 
+                            <option value="activity2">Activity2</option> 
+                            <option value="activity3">Activity3</option> 
+
+            </select>
+
+        </div>
 
 
     </form>

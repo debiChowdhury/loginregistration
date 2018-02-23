@@ -1,36 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
 
     <div class="container" style=" width: 40%;">
         <h2>Login</h2>
         <form #userForm="ngForm">
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="LoginEmail" placeholder="Enter email" name="email" [(ngModel)]="LoginEmail" required>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Enter email" name="loginEmail" [(ngModel)]="loginEmail" required>
 
             </div>
             <div class="form-group">
                 <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="LoginPwd" placeholder="Enter password" name="pwd" [(ngModel)]="LoginPwd" required>
+                <input type="password" class="form-control" id="loginPwd" placeholder="Enter password" name="loginPwd" [(ngModel)]="loginPwd" required>
             </div>
-            <div class="checkbox">
-                <label><input type="checkbox" name="remember"> Remember me</label>
-            </div>
-
+   
         </form>
 
         <button class="btn btn-default loginButton" (click)="onSubmit()" [disabled]="!userForm.valid">Login</button>
         <a class="btn btn-default signUpButton" routerLink="/signup" routerLinkActive="active">SignUp</a>
     </div>
 
-</body>
-
-</html>
