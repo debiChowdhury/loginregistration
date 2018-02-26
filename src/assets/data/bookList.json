@@ -1,56 +1,113 @@
-[{
-        "author": "Chinua Achebe",
-        "country": "Nigeria",
-        "imageLink": "images/things-fall-apart.jpg",
-        "language": "English",
-        "title": "Things Fall Apart",
-        "year": 1958,
-        "bookId": "activityBook01"
-    },
-    {
-        "author": "Hans Christian Andersen",
-        "country": "Denmark",
-        "imageLink": "images/fairy-tales.jpg",
-        "language": "Danish",
-        "title": "Fairy tales",
-        "year": 1836,
-        "bookId": "activityBook02"
-    },
-    {
-        "author": "Dante Alighieri",
-        "country": "Italy",
-        "imageLink": "images/the-divine-comedy.jpg",
-        "language": "Italian",
-        "title": "The Divine Comedy",
-        "year": 1315,
-        "bookId": "activityBook03"
-    },
-    {
-        "author": "Giovanni Boccaccio",
-        "country": "Greece",
-        "imageLink": "images/the-odyssey-of-homer.jpg",
-        "language": "Greek",
-        "title": "Odyssey",
-        "year": 1850,
-        "bookId": "activityBook04"
-    },
-    {
-        "author": "Henrik Ibsen",
-        "country": "Norway",
-        "imageLink": "images/a-Dolls-house.jpg",
-        "language": "Norwegian",
-        "title": "The Book Of Job",
-        "year": 1690,
-        "bookId": "activityBook05"
-    },
-    {
-        "author": "Franz Kafka",
-        "country": "Czechoslovakia",
-        "imageLink": "images/stories-of-franz-kafka.jpg",
-        "language": "German",
-        "title": "Stories",
-        "year": 1924,
-        "bookId": "activityBook06"
-    }
+{
+    "library1": [{
+            "author": "Chinua Achebe",
+            "country": "Nigeria",
+            "imageLink": "images/things-fall-apart.jpg",
+            "language": "English",
+            "title": "Things Fall Apart",
+            "year": 1958,
+            "bookId": "activityBook01"
+        },
+        {
+            "author": "Hans Christian Andersen",
+            "country": "Denmark",
+            "imageLink": "images/fairy-tales.jpg",
+            "language": "Danish",
+            "title": "Fairy tales",
+            "year": 1836,
+            "bookId": "activityBook02"
+        },
+        {
+            "author": "Dante Alighieri",
+            "country": "Italy",
+            "imageLink": "images/the-divine-comedy.jpg",
+            "language": "Italian",
+            "title": "The Divine Comedy",
+            "year": 1315,
+            "bookId": "activityBook03"
+        },
+        {
+            "author": "Giovanni Boccaccio",
+            "country": "Greece",
+            "imageLink": "images/the-odyssey-of-homer.jpg",
+            "language": "Greek",
+            "title": "Odyssey",
+            "year": 1850,
+            "bookId": "activityBook04"
+        },
+        {
+            "author": "Henrik Ibsen",
+            "country": "Norway",
+            "imageLink": "images/a-Dolls-house.jpg",
+            "language": "Norwegian",
+            "title": "The Book Of Job",
+            "year": 1690,
+            "bookId": "activityBook05"
+        },
+        {
+            "author": "Franz Kafka",
+            "country": "Czechoslovakia",
+            "imageLink": "images/stories-of-franz-kafka.jpg",
+            "language": "German",
+            "title": "Stories",
+            "year": 1924,
+            "bookId": "activityBook06"
+        }
+    ],
+    "library2": [{
+            "author": "Virgil",
+            "country": "Roman Empire",
+            "imageLink": "images/the-aeneid.jpg",
+            "language": "Classical Latin",
+            "title": "The Aeneid",
+            "year": -23,
+            "bookId": "activityBook07"
+        },
+        {
+            "author": "Vyasa",
+            "country": "India",
+            "imageLink": "images/the-mahab-harata.jpg",
+            "language": "Sanskrit",
 
-]
+            "title": "Mahabharata",
+            "year": -700,
+            "bookId": "activityBook08"
+        },
+        {
+            "author": "Walt Whitman",
+            "country": "United States",
+            "imageLink": "images/leaves-of-grass.jpg",
+            "language": "English",
+            "title": "Leaves of Grass",
+            "year": 1855,
+            "bookId": "activityBook09"
+        },
+        {
+            "author": "Virginia Woolf",
+            "country": "United Kingdom",
+            "imageLink": "images/mrs-dalloway.jpg",
+            "language": "English",
+            "title": "Mrs Dalloway",
+            "year": 1925,
+            "bookId": "activityBook10"
+        },
+        {
+            "author": "Virginia Woolf",
+            "country": "United Kingdom",
+            "imageLink": "images/to-the-lighthouse.jpg",
+            "language": "English",
+            "title": "To the Lighthouse",
+            "year": 1927,
+            "bookId": "activityBook11"
+        },
+        {
+            "author": "Marguerite Yourcenar",
+            "country": "France/Belgium",
+            "imageLink": "images/memoirs-of-hadrian.jpg",
+            "language": "French",
+            "title": "Memoirs of Hadrian",
+            "year": 1951,
+            "bookId": "activityBook12"
+        }
+    ]
+}

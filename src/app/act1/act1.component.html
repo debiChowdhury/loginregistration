@@ -1,11 +1,19 @@
-<div class="container">
-    <div class="row">
-        <div class="" *ngIf="bookList.length !==0">
-            <div class="thumbnail bookContainer" *ngFor="let bookData of bookList">
-                <a (click)="routeToBook(bookData.bookId)" >
-                    <img src="/assets/images/book.png" alt="books" style="width: 60%;">
-                    <div class="caption">
-                        <p class="bookName">{{bookData.title}}</p>
+<div class="form-group">
+    <label for="libraryType ">Select Your Library Type:</label>
+    <select name="libraryType " id="libraryType " [(ngModel)]="libraryType" (change)="getlibraryOption()">
+             <option>select</option> 
+                            <option  *ngFor="let libraryOption of libraryOption">{{libraryOption}}</option> 
+                             
+</select>
+</div>
+<div class="container ">
+    <div class="row ">
+        <div class=" " *ngIf="visibleBookList.length !==0 ">
+            <div class="thumbnail bookContainer " *ngFor="let bookData of visibleBookList">
+                <a (click)="routeToBook(bookData.bookId) ">
+                    <img src="/assets/images/book.png " alt="books " style="width: 60%;">
+                    <div class="caption ">
+                        <p class="bookName ">{{bookData.title}}</p>
                     </div>
                 </a>
             </div>
