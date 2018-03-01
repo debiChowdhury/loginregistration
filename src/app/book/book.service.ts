@@ -5,10 +5,10 @@ import 'rxjs/add/operator/map';
 
 @Injectable() 
 export class BookContentService{
-    _url: 'assets/data/bookContent.json';
+    url: string = 'assets/data/bookContent.json';
     constructor(private _httpCall: Http) { }
     getBookContent(): Observable<any>{
-        return this._httpCall.get(this._url)
+        return this._httpCall.get(this.url)
             .map((response: Response) => { return response.json() });
     }
 }

@@ -4,7 +4,17 @@
         "title": "Things Fall Apart",
         "year": 1958,
         "bookId": "activityBook01",
-        "content": "Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph."
+        "content": [{
+            "page1": "Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.A paragraph is defined as“ a group of sentences or a single sentence that forms a unit”(Lunsford and Connors 116).Length and appearance do not determine whether a section in a paper is a paragraph.",
+
+            "page2": "For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.Ultimately, a paragraph is a sentence or group of sentences that support one main idea.In this handout,we will refer to this as the“ controlling idea, because it controls what happens in the rest of the paragraph. "
+        }, {
+            "page1": "A group of sentences or a single sentence that forms a unit.Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.A paragraph is defined as“ a group of sentences or a single sentence that forms a unit”(Lunsford and Connors 116).Length and appearance do not determine whether a section in a paper is a paragraph.",
+            "page2": " paragraph can be just one sentence long.Ultimately, a paragraph is a sentence or group of sentences that support one main idea.[w For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.Ultimately, a paragraph is a sentence or group of sentences that support one main idea.In this handout,we will refer to this as the“ controlling idea, because it controls what happens in the rest of the paragraph. "
+        }, {
+            "page1": "dzsfdxgdfgfhgfhg  rvsbn kern ek.rn ern fkeParagraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.A paragraph is defined as“ a group of sentences or a single sentence that forms a unit”(Lunsford and Connors 116).Length and appearance do not determine whether a section in a paper is a paragraph.",
+            "page2": " paragraph can be just one sentence long.Ultimately, a paragraph is a sentence or group of sentences that support one main idea. wekdq[w For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.Ultimately, a paragraph is a sentence or group of sentences that support one main idea.In this handout,we will refer to this as the“ controlling idea, because it controls what happens in the rest of the paragraph. "
+        }]
     },
     {
         "author": "Hans Christian Andersen",
@@ -12,7 +22,19 @@
         "title": "Fairy tales",
         "year": 1836,
         "bookId": "activityBook02",
-        "content": "Before you can begin to determine what the composition of a particular paragraph will be, you must first decide on an argument and a working thesis statement for your paper. What is the most important idea that you are trying to convey to your reader? The information in each paragraph must be related to that idea. In other words, your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph. A working thesis functions like a seed from which your paper, and your ideas, will grow. The whole process is an organic one—a natural progression from a seed to a full-blown paper where there are direct, familial relationships between all of the ideas in the paper."
+        "content": [{
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            },
+            {
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            }
+        ]
+
     },
     {
         "author": "Dante Alighieri",
@@ -20,14 +42,40 @@
         "title": "The Divine Comedy",
         "year": 1315,
         "bookId": "activityBook03",
-        "content": "The decision about what to put into your paragraphs begins with the germination of a seed of ideas; this “germination process” is better known as brainstorming. There are many techniques for brainstorming; whichever one you choose, this stage of paragraph development cannot be skipped. Building paragraphs can be like building a skyscraper: there must be a well-planned foundation that supports what you are building. Any cracks, inconsistencies, or other corruptions of the foundation can cause your whole paper to crumble."
+        "content": [
+
+            {
+                "page1": "The decision about what to put into your paragraphs begins with the germination of a seed of ideas; this “germination process” is better known as brainstorming. There are many techniques for brainstorming; whichever one you choose, this stage of paragraph development cannot be skipped. ",
+
+                "page2": "Building paragraphs can be like building a skyscraper: there must be a well-planned foundation that supports what you are building. Any cracks, inconsistencies, or other corruptions of the foundation can cause your whole paper to crumble."
+
+            },
+            {
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            }
+        ]
     },
     {
         "author": "Giovanni Boccaccio",
         "country": "Greece",
         "title": "Odyssey",
         "year": 1850,
-        "bookId": "Paragraph development continues with an expression of the rationale or the explanation that the writer gives for how the reader should interpret the information presented in the idea statement or topic sentence of the paragraph. The writer explains his/her thinking about the main topic, idea, or focus of the paragraph. Here’s the sentence that would follow the controlling idea about slave spirituals:"
+        "bookId": "activityBook04",
+        "content": [{
+            "page1": "Paragraph development continues with an expression of the rationale or the explanation that the writer gives for how the reader should interpret the information presented in the idea statement or topic sentence of the paragraph. ",
+
+            "page2": "The writer explains his / her thinking about the main topic, idea, or focus of the paragraph.Here’ s the sentence that would follow the controlling idea about slave spirituals:"
+        }, {
+
+            "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+
+            "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+        }]
+
     },
     {
         "author": "Henrik Ibsen",
@@ -35,7 +83,18 @@
         "title": "The Book Of Job",
         "year": 1690,
         "bookId": "activityBook05",
-        "content": "The next movement in paragraph development is an explanation of each example and its relevance to the topic sentence and rationale that were stated at the beginning of the paragraph. This explanation shows readers why you chose to use this/or these particular examples as evidence to support the major claim, or focus, in your paragraph.."
+        "content": [{
+                "page1": "The next movement in paragraph development is an explanation of each example and its relevance to the topic sentence and rationale that were stated at the beginning of the paragraph. This explanation shows readers why you chose to use this/or these particular examples as evidence to support the major claim, or focus, in your paragraph..",
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            },
+            {
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            }
+        ]
+
     },
     {
         "author": "Franz Kafka",
@@ -43,7 +102,136 @@
         "title": "Stories",
         "year": 1924,
         "bookId": "activityBook06",
-        "content": "magine each paragraph as a sandwich. The real content of the sandwich—the meat or other filling—is in the middle. It includes all the evidence you need to make the point. But it gets kind of messy to eat a sandwich without any bread. Your readers don’t know what to do with all the evidence you’ve given them. So, the top slice of bread (the first sentence of the paragraph) explains the topic (or controlling idea) of the paragraph. And, the bottom slice (the last sentence of the paragraph) tells the reader how the paragraph relates to the broader argument. In the original and revised paragraphs below, notice how a topic sentence expressing the controlling idea tells the reader the point of all the evidence."
+        "content": [{
+                "page1": "Magine each paragraph as a sandwich. The real content of the sandwich—the meat or other filling—is in the middle. It includes all the evidence you need to make the point. But it gets kind of messy to eat a sandwich without any bread. Your readers don’t know what to do with all the evidence you’ve given them. So, the top slice of bread (the first sentence of the paragraph) explains the topic (or controlling idea) of the paragraph.",
+
+                "page2": "And, the bottom slice (the last sentence of the paragraph) tells the reader how the paragraph relates to the broader argument. In the original and revised paragraphs below, notice how a topic sentence expressing the controlling idea tells the reader the point of all the evidence."
+            },
+            {
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            }
+        ]
+
+    },
+    {
+        "author": "Virgil",
+        "country": "Roman Empire",
+        "title": "The Aeneid",
+        "year": -23,
+        "bookId": "activityBook07",
+        "content": [{
+            "page1": "Paragraph development continues with an expression of the rationale or the explanation that the writer gives for how the reader should interpret the information presented in the idea statement or topic sentence of the paragraph. ",
+
+            "page2": "The writer explains his / her thinking about the main topic, idea, or focus of the paragraph.Here’ s the sentence that would follow the controlling idea about slave spirituals:"
+        }, {
+
+            "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+
+            "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+        }]
+
+    },
+    {
+        "author": "Vyasa",
+        "country": "India",
+        "title": "Mahabharata",
+        "year": -700,
+        "bookId": "activityBook08",
+        "content": [{
+                "page1": "The decision about what to put into your paragraphs begins with the germination of a seed of ideas; this “germination process” is better known as brainstorming. There are many techniques for brainstorming; whichever one you choose, this stage of paragraph development cannot be skipped. ",
+
+                "page2": "Building paragraphs can be like building a skyscraper: there must be a well-planned foundation that supports what you are building. Any cracks, inconsistencies, or other corruptions of the foundation can cause your whole paper to crumble."
+
+            },
+            {
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            }
+        ]
+    },
+    {
+        "author": "Walt Whitman",
+        "country": "United States",
+        "title": "Leaves of Grass",
+        "year": 1855,
+        "bookId": "activityBook09",
+        "content": [{
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            },
+            {
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            }
+        ]
+
+    },
+    {
+        "author": "Virginia Woolf",
+        "country": "United Kingdom",
+        "title": "Mrs Dalloway",
+        "year": 1925,
+        "bookId": "activityBook10",
+        "content": [{
+                "page1": "The next movement in paragraph development is an explanation of each example and its relevance to the topic sentence and rationale that were stated at the beginning of the paragraph. This explanation shows readers why you chose to use this/or these particular examples as evidence to support the major claim, or focus, in your paragraph..",
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            },
+            {
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            }
+        ]
+    },
+    {
+        "author": "Virginia Woolf",
+        "country": "United Kingdom",
+        "title": "To the Lighthouse",
+        "year": 1927,
+        "bookId": "activityBook11",
+        "content": [
+            {
+                "page1": "The decision about what to put into your paragraphs begins with the germination of a seed of ideas; this “germination process” is better known as brainstorming. There are many techniques for brainstorming; whichever one you choose, this stage of paragraph development cannot be skipped. ",
+
+                "page2": "Building paragraphs can be like building a skyscraper: there must be a well-planned foundation that supports what you are building. Any cracks, inconsistencies, or other corruptions of the foundation can cause your whole paper to crumble."
+
+            },
+            {
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            }
+        ]
+    },
+    {
+        "author": "Marguerite Yourcenar",
+        "country": "France/Belgium",
+        "title": "Memoirs of Hadrian",
+        "year": 1951,
+        "bookId": "activityBook12",
+        "content": [{
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            },
+            {
+                "page1": "Before you can begin to determine what the composition of a particular paragraph will be,you must first decide on an argument and a working thesis statement for your paper.What is the most important idea that you are trying to convey to your reader ? The information in each paragraph must be related to that idea.",
+
+                "page2": "In other words,your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph.A working thesis functions like a seed from which your paper,and your ideas,  will grow.The whole process is an organic one— a natural progression from a seed to a full - blown paper where there are direct, familial relationships between all of the ideas in the paper."
+            }
+        ]
+
     }
 
 ]

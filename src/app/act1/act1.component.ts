@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, Input, OnInit, EventEmitter } from '@angular/core';
 import { Http } from '@angular/http';
 import { BookListService } from './act1.service';
 import { RouterModule, Router } from '@angular/router';
@@ -8,12 +8,15 @@ import { RouterModule, Router } from '@angular/router';
   styleUrls: ['./act1.component.css']
 })
 export class Act1Component implements OnInit {
+
   bookList: any[] = [];
   libraryType: string;
   visibleBookList: any[] = [];
   libraryOption = [];
+  @Output() loggedInUser = new EventEmitter<string>();
   constructor(private _booklist: BookListService, private _router: Router) { }
   ngOnInit() {
+    
     this._booklist.getBookList().subscribe((data) => {
       this.bookList = data;
       console.log(this.bookList);
@@ -44,4 +47,8 @@ export class Act1Component implements OnInit {
     this._router.navigate(['/activity1/book', { id: id }]);
 
   }
+  public sendData(data: any) {
+    this.loggedInUser.emit(data);
+  }
+  
 }

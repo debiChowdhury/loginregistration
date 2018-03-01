@@ -1,14 +1,30 @@
 <div class="container">
-    <div class="row">
-        <div *ngIf="bookList.length !==0">
-            <div class="thumbnail bookContainer" *ngFor="let bookData of bookList">
-                <a (click)="routeToBook(bookData.bookId)">
-                    <img src="/assets/images/book.png" alt="books" style="width: 60%;">
-                    <div class="caption">
-                        <p class="bookName">{{bookData.title}}</p>
-                    </div>
-                </a>
+    <div class="row rowContainer">
+        <div *ngIf="bookContent.length !==0">
+            <div class="thumbnail bookContainer contentStyle col-sm-5">
+
+                <!-- <img src="/assets/images/book.png" alt="books" style="width: 60%;"> -->
+                <div class="caption">
+                    <p class="bookName">{{bookContent[currentIndex].page1}}</p>
+                </div>
+            </div>
+            <div class="thumbnail bookContainer contentStyle col-sm-5">
+
+                <!-- <img src="/assets/images/book.png" alt="books" style="width: 60%;"> -->
+                <div class="caption">
+                    <p class="bookName">{{bookContent[currentIndex].page2}}</p>
+                </div>
             </div>
         </div>
     </div>
+    <div>
+        <ul class="pager">
+            <li><button class="btn btn-info" (click)="goPrevPage()" [disabled]="currentIndex === 0">Previous</button></li>
+            <li><button class="btn btn-info" (click)="goNextPage()" [disabled]="bookContent.length - 1 === currentIndex">Next</button></li>
+        </ul>
+    </div>
+    <ul class="pager option">
+        <li class="previous"><a routerLink='/activity1' routerLinkActive="active">Previous</a></li>
+        <!-- <li class="next"><a href="#">Next</a></li> -->
+    </ul>
 </div>

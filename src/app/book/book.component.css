@@ -1,0 +1,32 @@
+.contentStyle {
+    height: 490px;
+    margin: 30px;
+    font-size: 20px;
+    font-family: serif;
+    overflow: overlay;
+}
+
+.rowContainer {
+    margin-left: 50px;
+}
+
+.pager li>a:focus,
+.pager li>a:hover {
+    background-color: #064479;
+    color: white;
+}
+
+.pager {
+    margin-bottom: -38px;
+    padding-left: 0;
+    /* margin: 20px 0; */
+    text-align: center;
+    list-style: none;
+    margin: 0px !important;
+}
+
+@media (min-width: 768px) {
+    .contentStyle {
+        width: 40.666667%;
+    }
+}
