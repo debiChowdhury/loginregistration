@@ -12,6 +12,7 @@ import { BookListService } from './act1/act1.service';
 import { BookContentService } from './book/book.service';
 import { HttpModule } from '@angular/http';
 import { BookComponent } from './book/book.component';
+import { LoggedStatusService } from './logged-status.service';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,7 @@ import { BookComponent } from './book/book.component';
     Act1Component,
     Act2Component,
     Act3Component,
-    BookComponent
-   
+    BookComponent   
   ],
   imports: [
     BrowserModule,
@@ -51,7 +51,7 @@ import { BookComponent } from './book/book.component';
       }   
     ],)
   ],
-  providers: [BookListService, BookContentService],
+  providers: [BookListService, BookContentService, LoggedStatusService],
   bootstrap: [DashboardComponent]
 })
 export class AppModule { }

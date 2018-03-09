@@ -12,7 +12,7 @@ export class SignupComponent implements OnInit {
   pwd: string;
   confirmPwd: string;
   activityType: string;
-
+  userName: string;
   constructor(private routerPath: Router) { }
 
   ngOnInit() {
@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
       alert('Please enter valid email');
     } else {
       if (this.pwd === this.confirmPwd) {
-        userInfo.push({ email: this.email, pwd: this.pwd,activityType:this.activityType });
+        userInfo.push({ username: this.userName, email: this.email, pwd: this.pwd, activityType:this.activityType });
         window.localStorage.setItem('userInfoStorage', JSON.stringify(userInfo));
         this.routerPath.navigateByUrl('/signin');
       } else {

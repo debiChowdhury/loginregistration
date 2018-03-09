@@ -1,11 +1,14 @@
-import { Component, Output, Input, OnInit, EventEmitter } from '@angular/core';
+import { Component, Output, Input, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { BookListService } from './act1.service';
-import { RouterModule, Router } from '@angular/router';
+import { RouterModule, Router, ActivatedRoute } from '@angular/router';
+import { LoggedStatusService } from '../logged-status.service';
+
 @Component({
   selector: 'app-act1',
   templateUrl: './act1.component.html',
-  styleUrls: ['./act1.component.css']
+  styleUrls: ['./act1.component.css'],
+  providers: [LoggedStatusService]
 })
 export class Act1Component implements OnInit {
 
@@ -13,17 +16,27 @@ export class Act1Component implements OnInit {
   libraryType: string;
   visibleBookList: any[] = [];
   libraryOption = [];
-  @Output() loggedInUser = new EventEmitter<string>();
-  constructor(private _booklist: BookListService, private _router: Router) { }
+  userName: string;
+  status: boolean;
+  constructor(private _booklist: BookListService, private _router: Router, private routeName: ActivatedRoute) { }
   ngOnInit() {
-    
+    let name = this.routeName.snapshot.params['username'];
+    this.userName = name;
     this._booklist.getBookList().subscribe((data) => {
       this.bookList = data;
       console.log(this.bookList);
       this.getBook();
-      this.libraryOption=Object.keys(this.bookList);
+      this.libraryOption = Object.keys(this.bookList);
     });
+    status = JSON.parse(sessionStorage.getItem('status'));
+    console.log(status);
+    if (status == 'false' || status== 'null') {
+      this._router.navigateByUrl('/signin');
+      alert('please login again')
+    }
+   
   }
+
   getlibraryOption() {
     this.visibleBookList = [];
     console.log(this.libraryType);
@@ -33,8 +46,8 @@ export class Act1Component implements OnInit {
           this.visibleBookList.push(item);
         });
       }
-      };
     };
+  };
   getBook() {
     for (let key in this.bookList) {
       this.bookList[`${key}`].map((item) => {
@@ -47,8 +60,13 @@ export class Act1Component implements OnInit {
     this._router.navigate(['/activity1/book', { id: id }]);
 
   }
-  public sendData(data: any) {
-    this.loggedInUser.emit(data);
+  // for logout button
+  logOutButton() {
+    status =  JSON.parse(sessionStorage.getItem('status'));
+    if (status) {
+      sessionStorage.setItem('status', 'false');
+      this._router.navigateByUrl('/signin');
+      console.log('please login again to continue');
+    } 
   }
-  
 }
