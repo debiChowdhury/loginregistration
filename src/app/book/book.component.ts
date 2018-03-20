@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { BookContentService } from './book.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { LoggedStatusService } from '../logged-status.service';
 
 @Component({
   selector: 'app-book',
@@ -15,7 +16,8 @@ export class BookComponent implements OnInit {
   bookId: string;
   divideContent: Array<any> = [];
   currentIndex = 0;
-  constructor(private _bookContent: BookContentService, private route: ActivatedRoute) { }
+  status: boolean;
+  constructor(private _bookContent: BookContentService, private route: ActivatedRoute, private _router: Router, private loggedStatus: LoggedStatusService) { }
 
   ngOnInit() {
     this._bookContent.getBookContent().subscribe(content => {
@@ -28,7 +30,14 @@ export class BookComponent implements OnInit {
           console.log(this.bookContent)
         }
       }
-    })
+    });
+    //status = JSON.parse(sessionStorage.getItem('status'));
+    status = this.loggedStatus.getSessionStorageItem();
+    console.log(status);
+    if (status == 'false' || status == 'null') {
+      this._router.navigateByUrl('/signin');
+      alert('please login again')
+    }
   }
   goPrevPage() {
     this.currentIndex--;

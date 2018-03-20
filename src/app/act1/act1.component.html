@@ -1,8 +1,8 @@
 <div class="form-group">
     <label for="libraryType" class="option">Select Your Library Type:</label>
     <select name="libraryType " id="libraryType " [(ngModel)]="libraryType" (change)="getlibraryOption()">
-             <option>select</option> 
-                            <option  *ngFor="let libraryOption of libraryOption">{{libraryOption}}</option> 
+              <option>---</option>  
+             <option  *ngFor="let libraryOption of libraryOption">{{libraryOption}}</option> 
                              
 </select>
     <div class="logOutButton">

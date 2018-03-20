@@ -34,7 +34,6 @@ export class Act1Component implements OnInit {
       this._router.navigateByUrl('/signin');
       alert('please login again')
     }
-   
   }
 
   getlibraryOption() {

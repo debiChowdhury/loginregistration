@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoggedStatusService } from '../logged-status.service';
+
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +15,7 @@ export class SignupComponent implements OnInit {
   confirmPwd: string;
   activityType: string;
   userName: string;
-  constructor(private routerPath: Router) { }
+  constructor(private routerPath: Router, private getAndSetInfo: LoggedStatusService) { }
 
   ngOnInit() {
   }
@@ -22,7 +24,7 @@ export class SignupComponent implements OnInit {
     console.log(this.email + ',' + this.pwd + ',' + this.confirmPwd + ',' + this.activityType);
     let emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     let userInfo;
-    userInfo = JSON.parse(window.localStorage.getItem('userInfoStorage'));
+    userInfo = this.getAndSetInfo.getLocalStorageItem();
     if (userInfo === null) {
       userInfo = [];
     }
@@ -31,7 +33,7 @@ export class SignupComponent implements OnInit {
     } else {
       if (this.pwd === this.confirmPwd) {
         userInfo.push({ username: this.userName, email: this.email, pwd: this.pwd, activityType:this.activityType });
-        window.localStorage.setItem('userInfoStorage', JSON.stringify(userInfo));
+        this.getAndSetInfo.setLocalStorageItem(userInfo);
         this.routerPath.navigateByUrl('/signin');
       } else {
         alert('password and confirm password does not match');
