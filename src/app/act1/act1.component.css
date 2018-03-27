@@ -1,15 +1,15 @@
 .bookContainer {
     display: inline-block;
-    margin-left: 85px;
-    height: 170px;
-    width: 24%;
+    margin-left: 95px;
+    height: 218px;
+    width: 15%;
     margin-top: 64px;
     float: left;
 }
 
 .bookName {
     font-size: 20px;
-    margin-left: 60px;
+    margin-left: 22px;
     font-family: sans-serif;
 }
 

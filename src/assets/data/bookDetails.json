@@ -1,5 +1,4 @@
-{
-    "library1": [{
+[{
             "author": "Chinua Achebe",
             "country": "Nigeria",
             "imageLink": "assets/images/things-fall-apart.jpg",
@@ -52,9 +51,8 @@
             "title": "Stories",
             "year": 1924,
             "bookId": "activityBook06"
-        }
-    ],
-    "library2": [{
+        },
+    {
             "author": "Virgil",
             "country": "Roman Empire",
             "imageLink": "assets/images/the-aeneid.jpg",
@@ -110,4 +108,3 @@
             "bookId": "activityBook12"
         }
     ]
-}

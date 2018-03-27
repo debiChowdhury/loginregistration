@@ -10,9 +10,13 @@ import { Act2Component } from './act2/act2.component';
 import { Act3Component } from './act3/act3.component';
 import { BookListService } from './act1/act1.service';
 import { BookContentService } from './book/book.service';
+import { BookDetailsService } from './act2/act2.service';
 import { HttpModule } from '@angular/http';
 import { BookComponent } from './book/book.component';
 import { LoggedStatusService } from './logged-status.service';
+import { DetailsComponent } from './act2/details/details.component';
+import { CheckoutComponent } from './act2/checkout/checkout.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { LoggedStatusService } from './logged-status.service';
     Act1Component,
     Act2Component,
     Act3Component,
-    BookComponent   
+    BookComponent,
+    DetailsComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -41,17 +47,31 @@ import { LoggedStatusService } from './logged-status.service';
         path: 'activity1', component: Act1Component
       },
       {
-        path: 'activity2', component: Act2Component
+        path: 'activity2', component: Act2Component,
+        children: [
+          {
+            path: '',
+            component: DetailsComponent
+          },
+          {
+            path: 'details',
+            component: DetailsComponent
+          },
+          {
+            path: 'checkout',
+            component: CheckoutComponent
+          }
+        ]
       },
       {
         path: 'activity3', component: Act3Component
       },
       {
         path: 'activity1/book', component: BookComponent
-      }   
-    ],)
+      }
+    ], )
   ],
-  providers: [BookListService, BookContentService, LoggedStatusService],
+  providers: [BookListService, BookContentService, LoggedStatusService, BookDetailsService],
   bootstrap: [DashboardComponent]
 })
 export class AppModule { }

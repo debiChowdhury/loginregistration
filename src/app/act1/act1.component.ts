@@ -18,7 +18,7 @@ export class Act1Component implements OnInit {
   libraryOption = [];
   userName: string;
   status: boolean;
-  constructor(private _booklist: BookListService, private _router: Router, private routeName: ActivatedRoute) { }
+  constructor(private _booklist: BookListService, private _router: Router, private routeName: ActivatedRoute, private loggedStatus: LoggedStatusService) { }
   ngOnInit() {
     let name = this.routeName.snapshot.params['username'];
     this.userName = name;
@@ -28,7 +28,8 @@ export class Act1Component implements OnInit {
       this.getBook();
       this.libraryOption = Object.keys(this.bookList);
     });
-    status = JSON.parse(sessionStorage.getItem('status'));
+    // status = JSON.parse(sessionStorage.getItem('status'));
+    status = this.loggedStatus.getSessionStorageItem();
     console.log(status);
     if (status == 'false' || status== 'null') {
       this._router.navigateByUrl('/signin');
@@ -61,7 +62,8 @@ export class Act1Component implements OnInit {
   }
   // for logout button
   logOutButton() {
-    status =  JSON.parse(sessionStorage.getItem('status'));
+    // status =  JSON.parse(sessionStorage.getItem('status'));
+    status = this.loggedStatus.getSessionStorageItem();
     if (status) {
       sessionStorage.setItem('status', 'false');
       this._router.navigateByUrl('/signin');

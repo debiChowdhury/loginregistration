@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
 
 interface UserInfo {
   username?: string,
@@ -7,9 +7,7 @@ interface UserInfo {
   pwd?: string,
   activityType?: string
 }
-// interface status{
-//   loggedInStatus?: boolean
-// }
+
 @Injectable()
 export class LoggedStatusService {
 
