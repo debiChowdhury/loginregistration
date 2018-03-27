@@ -1,18 +1,26 @@
-<div class="container ">
-    <div class="row ">
-        <div class="col-sm-8" *ngIf="bookDetail.length !==0">
-            <div class="thumbnail bookContainer" *ngFor="let details of bookDetail">
-                <a>
-                    <img src="{{details.imageLink}}" alt="books " style="width: 102%; height: 194px;">
-                    <div class="caption ">
-                        <p class="bookName ">{{details.title}}</p>
-                    </div>
-                </a>
+<div>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-sm-8 bookPlace" *ngIf="bookDetail.length !==0">
+
+                <button class="button" style="vertical-align:middle;margin-left: -13%;"><span>Checkout </span></button>
+                <button type="button" class="btn btn-default btn-sm">
+                   <span class="glyphicon glyphicon-shopping-cart"></span>Cart
+              </button>
+                <div class="thumbnail bookContainer" *ngFor="let details of bookDetail">
+                    <a>
+                        <img src="{{details.imageLink}}" alt="books " style="width: 102%; height: 194px;">
+                        <div class="caption ">
+                            <p class="bookName ">{{details.title}}</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-4">
-            <div class=" ">
-                <router-outlet></router-outlet>
+            <div class="col-sm-4">
+                <div class=" ">
+                    <router-outlet></router-outlet>
+                </div>
             </div>
         </div>
     </div>
+</div>
