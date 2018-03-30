@@ -2,13 +2,13 @@
     <div class="container ">
         <div class="row ">
             <div class="col-sm-8 bookPlace" *ngIf="bookDetail.length !==0">
-
-                <button class="button" style="vertical-align:middle;margin-left: -13%;"><span>Checkout </span></button>
-                <button type="button" class="btn btn-default btn-sm">
-                   <span class="glyphicon glyphicon-shopping-cart"></span>Cart
+                <button class="checkOutButton" style="vertical-align:middle;margin-left: -13%;" *ngIf="!isActive" (click)="checkOutBtn()"><span>Checkout </span></button>
+                <!-- <button class="detailsButton" style="vertical-align:middle;margin-left: -13%;" *ngIf="isActive" (click)="detailsBtn()"><span>Details </span></button> -->
+                <button class="btn btn-default btn-sm goCartbutton">       
+          <span class="glyphicon glyphicon-shopping-cart"></span>
               </button>
                 <div class="thumbnail bookContainer" *ngFor="let details of bookDetail">
-                    <a>
+                    <a (click)="goToBookDetails(details.bookId)">
                         <img src="{{details.imageLink}}" alt="books " style="width: 102%; height: 194px;">
                         <div class="caption ">
                             <p class="bookName ">{{details.title}}</p>
@@ -17,10 +17,9 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class=" ">
-                    <router-outlet></router-outlet>
-                </div>
+                <app-details [currentBook]="book"></app-details>
             </div>
         </div>
     </div>
+    <router-outlet></router-outlet>
 </div>

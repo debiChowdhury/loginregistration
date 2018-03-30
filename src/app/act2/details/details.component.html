@@ -1,3 +1,13 @@
-<p>
-  details works!
-</p>
+<div>
+    <div>
+        <img src="{{currentBook.imageLink}}" class="cover-image" />
+    </div>
+    <div class="book-name"> {{currentBook.title}}</div>
+    <div class="author-name" *ngIf="currentBook.year !==undefined">{{currentBook.author}} ({{currentBook.year}})</div>
+    <div *ngIf="currentBook.year !==undefined" class="book-year">
+        <span style="font-weight:bold">Language:</span> {{currentBook.year}}
+    </div>
+    <div class="book-summary" *ngIf="currentBook.summary !==undefined">
+        <span style="font-weight:bold">Plot view:</span> {{currentBook.summary}}
+    </div>
+</div>

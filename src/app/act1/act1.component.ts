@@ -20,8 +20,10 @@ export class Act1Component implements OnInit {
   status: boolean;
   constructor(private _booklist: BookListService, private _router: Router, private routeName: ActivatedRoute, private loggedStatus: LoggedStatusService) { }
   ngOnInit() {
+    //getting the value from the url using snapshot
     let name = this.routeName.snapshot.params['username'];
     this.userName = name;
+    //subscribe the data to component
     this._booklist.getBookList().subscribe((data) => {
       this.bookList = data;
       console.log(this.bookList);
@@ -29,6 +31,7 @@ export class Act1Component implements OnInit {
       this.libraryOption = Object.keys(this.bookList);
     });
     // status = JSON.parse(sessionStorage.getItem('status'));
+    // checked the logged status of the user
     status = this.loggedStatus.getSessionStorageItem();
     console.log(status);
     if (status == 'false' || status== 'null') {
@@ -36,7 +39,7 @@ export class Act1Component implements OnInit {
       alert('please login again')
     }
   }
-
+// function to  load the book  after mathcing woth what user select
   getlibraryOption() {
     this.visibleBookList = [];
     console.log(this.libraryType);
@@ -48,6 +51,7 @@ export class Act1Component implements OnInit {
       }
     };
   };
+  //load the books 
   getBook() {
     for (let key in this.bookList) {
       this.bookList[`${key}`].map((item) => {

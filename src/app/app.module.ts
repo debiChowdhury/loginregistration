@@ -48,15 +48,7 @@ import { CheckoutComponent } from './act2/checkout/checkout.component';
       },
       {
         path: 'activity2', component: Act2Component,
-        children: [
-          {
-            path: '',
-            component: DetailsComponent
-          },
-          {
-            path: 'details',
-            component: DetailsComponent
-          },
+        children: [     
           {
             path: 'checkout',
             component: CheckoutComponent
