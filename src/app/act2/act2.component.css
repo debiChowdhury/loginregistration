@@ -56,18 +56,31 @@
     background-color: #0a5a80;
 }
 
+.add-cart-number {
+    background-color: #d80808;
+    font-size: 14px;
+    position: absolute;
+    top: 2px;
+    border-radius: 77px;
+    right: 78px;
+    font-weight: bold;
+    width: 19px;
+    color: white;
+}
+
 .caption {
     padding: 5px;
 }
 
 .goCartbutton {
     padding: 4px 10px !important;
-    background-color: #cccccc;
+    background-color: #0158a2;
     outline: 0;
+    color: white;
 }
 
 .goCartbutton:hover {
-    background-color: #ada9a9
+    background-color: #297dc5;
 }
 
 

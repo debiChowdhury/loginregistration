@@ -5,7 +5,10 @@
                 <button class="checkOutButton" style="vertical-align:middle;margin-left: -13%;" *ngIf="!isActive" (click)="checkOutBtn()"><span>Checkout </span></button>
                 <!-- <button class="detailsButton" style="vertical-align:middle;margin-left: -13%;" *ngIf="isActive" (click)="detailsBtn()"><span>Details </span></button> -->
                 <button class="btn btn-default btn-sm goCartbutton">       
-          <span class="glyphicon glyphicon-shopping-cart"></span>
+          <span class="glyphicon glyphicon-shopping-cart">
+            
+          </span>
+            <span class="add-cart-number">{{bookAddedCount}}</span>
               </button>
                 <div class="thumbnail bookContainer" *ngFor="let details of bookDetail">
                     <a (click)="goToBookDetails(details.bookId)">
@@ -17,7 +20,8 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <app-details [currentBook]="book"></app-details>
+                <app-details [currentBook]="book" (addedBookCount)="addedBookToCart($event)"></app-details>
+                <!-- <app-details #details></app-details> -->
             </div>
         </div>
     </div>

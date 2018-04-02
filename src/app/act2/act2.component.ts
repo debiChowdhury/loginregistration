@@ -14,7 +14,8 @@ export class Act2Component implements OnInit {
   bookId;
   parentBook;
   book = [];
-  // @ViewChild('details') DetailsComponent: DetailsComponent;
+  bookAddedCount:number;
+  //@ViewChild('details') DetailsComponent: DetailsComponent;
 
   constructor(private bookDetails: BookDetailsService, private route: Router, private routeParam: ActivatedRoute) {
   }
@@ -34,6 +35,7 @@ export class Act2Component implements OnInit {
     for (let i = 0; i < this.parentBook.length; i++) {
       if (this.bookId === this.parentBook[i].bookId) {
         this.book = this.parentBook[i];
+        // for vew-child
         // this.DetailsComponent.currentBook = this.book;
         // this.DetailsComponent.showData();
         console.log(this.book);
@@ -49,6 +51,12 @@ export class Act2Component implements OnInit {
       this.bookDetail = data;
       console.log(this.bookDetail);
     });
+  }
+
+  addedBookToCart(addCount) {
+    this.bookAddedCount = addCount;
+    console.log(this.bookAddedCount);
+    
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input,Output,OnChanges, SimpleChanges,EventEmitter } from '@angular/core';
 import { RouterModule, Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,10 +7,14 @@ import { RouterModule, Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit,OnChanges {
-  @Input() currentBook: Object;
+  @Input() currentBook: Object;// to get object from parent component i.e; from act2 component
+  @Output() addedBookCount: EventEmitter<any> = new EventEmitter<any>() ;
+
+  bookAddedCount: number = 0;
+  //currentBook;// for view-child variable
   
   
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {}
   
   ngOnInit() {
   }
@@ -19,10 +23,22 @@ export class DetailsComponent implements OnInit,OnChanges {
     this.currentBook = changes.currentBook.currentValue;
     console.log(this.currentBook)
   }
-
+ // for view-child funtion
   // showData() {
   //   console.log(this.currentBook);
   // }
-
+  addingToCart() {
+    this.bookAddedCount++;
+    // console.log(this.bookAddedCount);
+    this.addedBookCount.emit(this.bookAddedCount);
+  }
+  removeFromCart() {
+    this.bookAddedCount--;
+    if (this.bookAddedCount < 0) {
+      alert("You cart is already empty");
+      this.bookAddedCount = 0;
+    }
+    this.addedBookCount.emit(this.bookAddedCount);
+  }
 }
 

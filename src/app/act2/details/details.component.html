@@ -10,4 +10,10 @@
     <div class="book-summary" *ngIf="currentBook.summary !==undefined">
         <span style="font-weight:bold">Plot view:</span> {{currentBook.summary}}
     </div>
+    <button type="button" class="btn btn-default cart-button" *ngIf="currentBook.title !== undefined" (click)="addingToCart()">
+          <span class=" glyphicon glyphicon-shopping-cart "></span> Add To Cart
+        </button>
+    <button type="button" class="btn btn-default  remove-button" *ngIf="currentBook.title !== undefined" (click)="removeFromCart()">
+          <span class=""></span> Remove from Cart
+        </button>
 </div>
