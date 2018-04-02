@@ -35,7 +35,7 @@ export class DetailsComponent implements OnInit,OnChanges {
   removeFromCart() {
     this.bookAddedCount--;
     if (this.bookAddedCount < 0) {
-      alert("You cart is already empty");
+      alert("Your cart is already empty");
       this.bookAddedCount = 0;
     }
     this.addedBookCount.emit(this.bookAddedCount);

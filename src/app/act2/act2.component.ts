@@ -28,7 +28,7 @@ export class Act2Component implements OnInit {
     this.route.navigateByUrl('/activity2/checkout');
   }
 
-  //function to route the individual books with route params
+  //function to get the individual  details of books 
   goToBookDetails(id) {
     this.bookId = id;
     this.parentBook = this.bookDetail;
