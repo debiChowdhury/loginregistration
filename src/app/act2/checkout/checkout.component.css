@@ -1,0 +1,22 @@
+.books-title {
+    display: inline-block;
+    font-size: 20px;
+    font-family: serif;
+}
+
+.books-price {
+    float: right;
+    font-size: 20px;
+    font-family: serif;
+}
+
+.total-price {
+    padding-top: 80px;
+    border-top: 1px solid #eceaea;
+    width: 504px;
+    padding-left: 87px;
+    font-size: 25px;
+    font-family: serif;
+    color: #040404;
+}
+

@@ -56,16 +56,23 @@
     background-color: #0a5a80;
 }
 
+
 .add-cart-number {
-    background-color: #d80808;
     font-size: 14px;
-    position: absolute;
-    top: 2px;
-    border-radius: 77px;
-    right: 78px;
+    position: relative;
+    /* top: -7px; */
+    border-radius: 75px;
+    /* right: -7px; */
     font-weight: bold;
-    width: 19px;
+    /* width: 19px; */
+    /* padding: 2px; */
     color: white;
+}
+
+.checkOutButton:disabled {
+    background-color: #e6e6e6;
+    cursor: not-allowed;
+    color: #9e9a9a;
 }
 
 .caption {
@@ -81,6 +88,11 @@
 
 .goCartbutton:hover {
     background-color: #297dc5;
+}
+
+.visibleComp {
+    visibility: hidden;
+    display: none;
 }
 
 

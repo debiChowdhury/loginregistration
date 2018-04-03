@@ -7,6 +7,9 @@
     <div *ngIf="currentBook.year !==undefined" class="book-year">
         <span style="font-weight:bold">Language:</span> {{currentBook.year}}
     </div>
+    <div *ngIf="currentBook.price !==undefined" class="book-price">
+        <span style="font-weight:bold">Price:</span> {{currentBook.price}}
+    </div>
     <div class="book-summary" *ngIf="currentBook.summary !==undefined">
         <span style="font-weight:bold">Plot view:</span> {{currentBook.summary}}
     </div>

@@ -1,7 +1,16 @@
-<div class="check-out-container" style="    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: white;
-    height: 637px;">
-    checkout works!
+<div style="width: 500px;padding-top: 40px;">
+    <div style="border-bottom: 1px solid #ade8ea;">
+        <div class="books-title">Items</div>
+        <div class="books-price">Price</div>
+    </div>
+    <div *ngFor="let data of booksToCheckOut">
+        <div class="books-title">{{data.title}}</div>
+        <div class="books-price">{{data.price}}</div>
+    </div>
+
+
+    <div class="total-price"> Your total payable amount : {{totalPrice}}</div>
+    <div style="padding-top: 100px;text-align: center;">
+        <button type="button" class="btn btn-info" style="width: 200px;">Buy Now</button>
+    </div>
 </div>

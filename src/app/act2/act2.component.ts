@@ -2,6 +2,11 @@ import { Component, OnInit, Output, Input, EventEmitter, ViewChild } from '@angu
 import { BookDetailsService } from './act2.service';
 import { RouterModule, Router, ActivatedRoute } from '@angular/router';
 import { DetailsComponent } from './details/details.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { LoggedStatusService } from '../logged-status.service';
+
+
+
 
 @Component({
   selector: 'app-act2',
@@ -14,22 +19,36 @@ export class Act2Component implements OnInit {
   bookId;
   parentBook;
   book = [];
-  bookAddedCount:number;
+  books = [];
+  bookAddedCount: number = 0;
+  isCheckOutLoaded = false;
+  status;
   //@ViewChild('details') DetailsComponent: DetailsComponent;
+  
 
-  constructor(private bookDetails: BookDetailsService, private route: Router, private routeParam: ActivatedRoute) {
+  constructor(private bookDetails: BookDetailsService, private route: Router, private routeParam: ActivatedRoute, private loggedStatus: LoggedStatusService) {
   }
 
   ngOnInit() {
     this.getData();
+    status = this.loggedStatus.getSessionStorageItem();
+    console.log(status);
+    if (status == 'false' || status == 'null') {
+      this.route.navigateByUrl('/signin');
+      alert('please login again')
+    }
+    
   }
   //function for checkout button
   checkOutBtn() {
-    this.route.navigateByUrl('/activity2/checkout');
+    //this.route.navigateByUrl('/activity2/checkout');
+    this.isCheckOutLoaded = true;
+    
   }
 
   //function to get the individual  details of books 
   goToBookDetails(id) {
+    this.isCheckOutLoaded = false;
     this.bookId = id;
     this.parentBook = this.bookDetail;
     for (let i = 0; i < this.parentBook.length; i++) {
@@ -38,7 +57,6 @@ export class Act2Component implements OnInit {
         // for vew-child
         // this.DetailsComponent.currentBook = this.book;
         // this.DetailsComponent.showData();
-        console.log(this.book);
         break;
       }
     }
@@ -49,14 +67,21 @@ export class Act2Component implements OnInit {
   getData() {
     this.bookDetails.getBookDetails().subscribe((data) => {
       this.bookDetail = data;
-      console.log(this.bookDetail);
     });
   }
 
   addedBookToCart(addCount) {
     this.bookAddedCount = addCount;
-    console.log(this.bookAddedCount);
     
+  }
+  logOutButton() {
+    this.status = this.loggedStatus.getSessionStorageItem();
+    if (this.status) {
+      sessionStorage.setItem('status', 'false');
+      this.route.navigateByUrl('/signin');
+      console.log('please login again to continue');
+    } 
+
   }
 
 }

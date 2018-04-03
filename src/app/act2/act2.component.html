@@ -2,7 +2,13 @@
     <div class="container ">
         <div class="row ">
             <div class="col-sm-8 bookPlace" *ngIf="bookDetail.length !==0">
-                <button class="checkOutButton" style="vertical-align:middle;margin-left: -13%;" *ngIf="!isActive" (click)="checkOutBtn()"><span>Checkout </span></button>
+
+                <!-- <button><span class="btn">Log out</span></button> -->
+                <button type="button" class="btn btn-primary" style="padding: 3px;" (click)="logOutButton()">LogOut</button>
+
+                <button class="checkOutButton" style="vertical-align:middle;margin-left: -27%;" (click)="checkOutBtn()" [disabled]="bookAddedCount === 0">
+                    <span>Checkout </span>
+                </button>
                 <!-- <button class="detailsButton" style="vertical-align:middle;margin-left: -13%;" *ngIf="isActive" (click)="detailsBtn()"><span>Details </span></button> -->
                 <button class="btn btn-default btn-sm goCartbutton">       
           <span class="glyphicon glyphicon-shopping-cart">
@@ -20,10 +26,11 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <app-details [currentBook]="book" (addedBookCount)="addedBookToCart($event)"></app-details>
+                <app-details [currentBook]="book" (addedBookCount)="addedBookToCart($event)" [ngClass]="{'visibleComp':isCheckOutLoaded}"></app-details>
                 <!-- <app-details #details></app-details> -->
+                <!-- <app-checkout [loadCheckout]="isCheckOutLoaded" *ngIf="isCheckOutLoaded" (checkOutBooks)="booksForCheckOut($event)"></app-checkout> -->
+                <app-checkout [ngClass]="{'visibleComp':!isCheckOutLoaded}"></app-checkout>
             </div>
         </div>
     </div>
-    <router-outlet></router-outlet>
 </div>

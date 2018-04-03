@@ -1,5 +1,6 @@
 import { Component, OnInit, Input,Output,OnChanges, SimpleChanges,EventEmitter } from '@angular/core';
 import { RouterModule, Router, ActivatedRoute } from '@angular/router';
+import { DataService } from '../act2.data.service';
 
 @Component({
   selector: 'app-details',
@@ -8,13 +9,15 @@ import { RouterModule, Router, ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit,OnChanges {
   @Input() currentBook: Object;// to get object from parent component i.e; from act2 component
-  @Output() addedBookCount: EventEmitter<any> = new EventEmitter<any>() ;
+  @Output() addedBookCount: EventEmitter<any> = new EventEmitter<any>();
+  // @Output() checkOutBooks: EventEmitter<any> = new EventEmitter<any>();
 
   bookAddedCount: number = 0;
+
   //currentBook;// for view-child variable
   
   
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private data: DataService) {}
   
   ngOnInit() {
   }
@@ -31,6 +34,8 @@ export class DetailsComponent implements OnInit,OnChanges {
     this.bookAddedCount++;
     // console.log(this.bookAddedCount);
     this.addedBookCount.emit(this.bookAddedCount);
+    this.data.changeMsg(this.currentBook);
+    
   }
   removeFromCart() {
     this.bookAddedCount--;

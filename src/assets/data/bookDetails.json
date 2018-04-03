@@ -6,7 +6,8 @@
         "title": "Things Fall Apart",
         "year": 1958,
         "bookId": "activityBook01",
-        "summary": "Escape will cancel and close the window. Things Fall Apart is about the tragic fall of the protagonist, Okonkwo, and the Igbo culture. Okonkwo is a respected and influential leader within the Igbo community of Umuofia in eastern Nigeria."
+        "summary": "Escape will cancel and close the window. Things Fall Apart is about the tragic fall of the protagonist, Okonkwo, and the Igbo culture. Okonkwo is a respected and influential leader within the Igbo community of Umuofia in eastern Nigeria.",
+        "price": 1000
     },
     {
         "author": "Hans Christian Andersen",
@@ -16,7 +17,8 @@
         "title": "Fairy tales",
         "year": 1836,
         "bookId": "activityBook02",
-        "summary": "A fairy tale, wonder tale, magic tale, or Märchen is folklore genre that takes the form of a short story that typically features entities such as dwarfs, dragons, elves, fairies, talking animals, trolls, unicorns, or witches, and usually magic or enchantments. "
+        "summary": "A fairy tale, wonder tale, magic tale, or Märchen is folklore genre that takes the form of a short story that typically features entities such as dwarfs, dragons, elves, fairies, talking animals, trolls, unicorns, or witches, and usually magic or enchantments. ",
+        "price":2000
     },
     {
         "author": "Dante Alighieri",
@@ -26,7 +28,8 @@
         "title": "The Divine Comedy",
         "year": 1315,
         "bookId": "activityBook03",
-        "summary": "The plot of the Divine Comedy is thus very simple: it is the narrative of Dante's journey towards redemption. The Inferno is generally thought to be the best and most interesting part, which may be a result of its inverse structure: the moral plot is less visible because Dante descends into Hell"
+        "summary": "The plot of the Divine Comedy is thus very simple: it is the narrative of Dante's journey towards redemption. The Inferno is generally thought to be the best and most interesting part, which may be a result of its inverse structure: the moral plot is less visible because Dante descends into Hell",
+        "price": 3000
     },
     {
         "author": "Giovanni Boccaccio",
@@ -36,7 +39,8 @@
         "title": "Odyssey",
         "year": 1850,
         "bookId": "activityBook04",
-        "summary": "Plot Overview. Ten years have passed since the fall of Troy, and the Greek hero Odysseus still has not returned to his kingdom in Ithaca. A large and rowdy mob of suitors who have overrun Odysseus's palace and pillaged his land continue to court his wife, Penelope. She has remained faithful to Odysseus."
+        "summary": "Plot Overview. Ten years have passed since the fall of Troy, and the Greek hero Odysseus still has not returned to his kingdom in Ithaca. A large and rowdy mob of suitors who have overrun Odysseus's palace and pillaged his land continue to court his wife, Penelope. She has remained faithful to Odysseus.",
+        "price": 4500
     },
     {
         "author": "Henrik Ibsen",
@@ -46,7 +50,8 @@
         "title": "A Dolls's house",
         "year": 1690,
         "bookId": "activityBook05",
-        "summary": "Her husband, Torvald, thinks her careless and childlike, and often calls her his doll. When he is appointed bank director, his first act is to relieve a man who was once disgraced for having forged his signature on a document. This man, Nils Krogstad, is the person from whom Nora has borrowed her money."
+        "summary": "Her husband, Torvald, thinks her careless and childlike, and often calls her his doll. When he is appointed bank director, his first act is to relieve a man who was once disgraced for having forged his signature on a document. This man, Nils Krogstad, is the person from whom Nora has borrowed her money.",
+        "price": 1000
     },
     {
         "author": "Franz Kafka",
@@ -56,7 +61,8 @@
         "title": "Stories",
         "year": 1924,
         "bookId": "activityBook06",
-        "summary": "The story tells of a plain-looking little bird (the Ugly Duckling) born in a barnyard. His brothers and sisters as well as the other birds and animals on the farm tease him for being plain and ugly, so he runs off to live with a flock of wild ducks and geese until hunters shoot down the flock."
+        "summary": "The story tells of a plain-looking little bird (the Ugly Duckling) born in a barnyard. His brothers and sisters as well as the other birds and animals on the farm tease him for being plain and ugly, so he runs off to live with a flock of wild ducks and geese until hunters shoot down the flock.",
+        "price": 500
     },
     {
         "author": "Virgil",
@@ -66,7 +72,8 @@
         "title": "The Aeneid",
         "year": -23,
         "bookId": "activityBook07",
-        "summary": " On the Mediterranean Sea, Aeneas and his fellow Trojans flee from their home city of Troy, which has been destroyed by the Greeks. They sail for Italy, where Aeneas is destined to found Rome."
+        "summary": " On the Mediterranean Sea, Aeneas and his fellow Trojans flee from their home city of Troy, which has been destroyed by the Greeks. They sail for Italy, where Aeneas is destined to found Rome.",
+        "price": 100
     },
     {
         "author": "Vyasa",
@@ -77,7 +84,8 @@
         "title": "Mahabharata",
         "year": -700,
         "bookId": "activityBook08",
-        "summary": "Duryodhana arranges for his maternal uncle to challenge Yudhishthira to a game of dice, and Yudhishthira gambles everything away, even himself. The Pandavas have to go into exile, but when they return they engage the Kauravas in battle. Krishna fights on the side of the Pandavas, and serves as Arjuna's charioteer."
+        "summary": "Duryodhana arranges for his maternal uncle to challenge Yudhishthira to a game of dice, and Yudhishthira gambles everything away, even himself. The Pandavas have to go into exile, but when they return they engage the Kauravas in battle. Krishna fights on the side of the Pandavas, and serves as Arjuna's charioteer.",
+        "price": 3000
     },
     {
         "author": "Walt Whitman",
@@ -87,7 +95,8 @@
         "title": "Leaves of Grass",
         "year": 1855,
         "bookId": "activityBook09",
-        "summary": "Leaves of Grass Summary. Leaves of Grass is a collection of poetry written over Walt Whitman's entire lifetime organized thematically into sections. Whitman revised and added to the book throughout his life, the final edition being published only months before his death in 1891."
+        "summary": "Leaves of Grass Summary. Leaves of Grass is a collection of poetry written over Walt Whitman's entire lifetime organized thematically into sections. Whitman revised and added to the book throughout his life, the final edition being published only months before his death in 1891.",
+        "price": "1,500"
     },
     {
         "author": "Virginia Woolf",
@@ -97,7 +106,8 @@
         "title": "Mrs Dalloway",
         "year": 1925,
         "bookId": "activityBook10",
-        "summary": "Mrs. Dalloway covers one day from morning to night in one woman's life. Clarissa Dalloway, an upper-class housewife, walks through her London neighborhood to prepare for the party she will host that evening."
+        "summary": "Mrs. Dalloway covers one day from morning to night in one woman's life. Clarissa Dalloway, an upper-class housewife, walks through her London neighborhood to prepare for the party she will host that evening.",
+        "price":2000
     },
     {
         "author": "Virginia Woolf",
@@ -107,7 +117,8 @@
         "title": "To the Lighthouse",
         "year": 1927,
         "bookId": "activityBook11",
-        "summary": "“To the lighthouse” is a novel written by Virginia Woolf at around 1927, and is centered on the visit of the Ramsey's to the Scotland Isle of Skye between 1910 and 1920"
+        "summary": "“To the lighthouse” is a novel written by Virginia Woolf at around 1927, and is centered on the visit of the Ramsey's to the Scotland Isle of Skye between 1910 and 1920",
+        "price": 500
     },
     {
         "author": "Marguerite Yourcenar",
@@ -117,6 +128,7 @@
         "title": "Memoirs of Hadrian",
         "year": 1951,
         "bookId": "activityBook12",
-        "summary": "The story begins with Hadrian, who is around sixty years of age, describing his incurable illness. He therefore wishes to recount important events in his life before his death. His earliest memories are his boyhood years in Italica. "
+        "summary": "The story begins with Hadrian, who is around sixty years of age, describing his incurable illness. He therefore wishes to recount important events in his life before his death. His earliest memories are his boyhood years in Italica. ",
+        "price":2000
     }
 ]

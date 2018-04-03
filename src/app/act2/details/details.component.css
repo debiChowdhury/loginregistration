@@ -29,7 +29,13 @@
 .book-year {
     font-size: 17px;
     font-family: serif;
-    margin-top: 30px;
+    margin-top: 15px;
+}
+
+.book-price {
+    font-size: 17px;
+    font-family: serif;
+  
 }
 
 .cart-button {

@@ -9,6 +9,7 @@ import { Act1Component } from './act1/act1.component';
 import { Act2Component } from './act2/act2.component';
 import { Act3Component } from './act3/act3.component';
 import { BookListService } from './act1/act1.service';
+import { DataService } from './act2/act2.data.service';
 import { BookContentService } from './book/book.service';
 import { BookDetailsService } from './act2/act2.service';
 import { HttpModule } from '@angular/http';
@@ -48,12 +49,7 @@ import { CheckoutComponent } from './act2/checkout/checkout.component';
       },
       {
         path: 'activity2', component: Act2Component,
-        children: [     
-          {
-            path: 'checkout',
-            component: CheckoutComponent
-          }
-        ]
+     
       },
       {
         path: 'activity3', component: Act3Component
@@ -63,7 +59,7 @@ import { CheckoutComponent } from './act2/checkout/checkout.component';
       }
     ], )
   ],
-  providers: [BookListService, BookContentService, LoggedStatusService, BookDetailsService],
+  providers: [BookListService, BookContentService, LoggedStatusService, BookDetailsService, DataService],
   bootstrap: [DashboardComponent]
 })
 export class AppModule { }
