@@ -13,6 +13,7 @@ export class CheckoutComponent implements OnInit{
   booksToCheckOut = [];
   totalPrice = 0;
   Price;
+  status;
   
 
   constructor(private data: DataService) { }
@@ -21,16 +22,21 @@ export class CheckoutComponent implements OnInit{
     this.data.currentMsg.subscribe(message => {
       this.message = message;
       this.booksToCheckOut.push(this.message);
-      console.log(this.booksToCheckOut)
       this.totalPrice = 0;
       for (let i = 0; i < this.booksToCheckOut.length; i++) {
         if (this.booksToCheckOut[i].price) {
           this.totalPrice += this.booksToCheckOut[i].price;
         }
       }
-        
-     
     });
+
+    this.data.currentStat.subscribe(status => {
+      this.status = status;
+      console.log(this.status);
+      if (this.status) {
+        this.booksToCheckOut.pop(); 
+      }
+    })
   
   }
 

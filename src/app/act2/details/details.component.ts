@@ -13,6 +13,7 @@ export class DetailsComponent implements OnInit,OnChanges {
   // @Output() checkOutBooks: EventEmitter<any> = new EventEmitter<any>();
 
   bookAddedCount: number = 0;
+  state = false;
 
   //currentBook;// for view-child variable
   
@@ -38,12 +39,14 @@ export class DetailsComponent implements OnInit,OnChanges {
     
   }
   removeFromCart() {
+    this.state =true;
     this.bookAddedCount--;
     if (this.bookAddedCount < 0) {
       alert("Your cart is already empty");
       this.bookAddedCount = 0;
     }
     this.addedBookCount.emit(this.bookAddedCount);
+    this.data.changeStat(this.state);
   }
 }
 
