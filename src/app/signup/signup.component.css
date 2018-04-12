@@ -1,0 +1,29 @@
+.signUpButton {
+    background-color: #c73508;
+    width: 45%;
+    margin-left: 160px;
+    margin-top: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.signUpButton:disabled {
+    background-color: #9c9a9a;
+    color: #c1c1c1;
+}
+
+input[type=email],
+input[type=password],
+select {
+    background-color: rgba(245, 236, 134, 0.14901960784313725);
+    color: black;
+    font-size: 15px;
+}
+
+input[type=email]:focus,
+input[type=password]:focus,
+select:focus {
+    box-shadow: 5px 5px 19px 0px #b3b1b1;
+    border: 1px solid #bbb7b7;
+}

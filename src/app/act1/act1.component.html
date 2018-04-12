@@ -1,12 +1,12 @@
 <div class="form-group">
     <label for="libraryType" class="option">Select Your Library Type:</label>
-    <select name="libraryType " id="libraryType " [(ngModel)]="libraryType" (change)="getlibraryOption()">
-              <option>---</option>  
+    <select class="form-control"  name="libraryType" id="libraryType" [(ngModel)]="libraryType" (change)="getlibraryOption()">
+              <option>Select</option>  
              <option  *ngFor="let libraryOption of libraryOption">{{libraryOption}}</option> 
                              
 </select>
     <div class="logOutButton">
-        <button type="button" class="btn btn-default btn-sm" (click)="logOutButton()">
+        <button type="button" class="btn btn-default btn-sm log-out-btn" (click)="logOutButton()">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </button>
     </div>

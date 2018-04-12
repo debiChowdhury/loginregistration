@@ -30,7 +30,9 @@ export class SignupComponent implements OnInit {
     }
     if (!emailPattern.test(this.email)) {
       alert('Please enter valid email');
-    } else {
+    } else if (this.activityType === undefined) {
+      alert("please enter activity type");
+    }else {
       if (this.pwd === this.confirmPwd) {
         userInfo.push({ username: this.userName, email: this.email, pwd: this.pwd, activityType:this.activityType });
         this.getAndSetInfo.setLocalStorageItem(userInfo);

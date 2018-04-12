@@ -1,3 +1,31 @@
+<nav class="navbar navbar-default" style="border-bottom: 2px solid #adadad;">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+
+            <li style="margin-top: 10px; margin-left:40px">
+                <button type="button" class="btn btn-default btn-sm bookmark" (click)="addBookMark()" *ngIf="!isBookMarked">
+                    <span>
+                        <img style="width: 25px;" src="assets/images/bookmark-ribbon.png"/>                   
+                    </span>
+                 </button>
+                <button type="button" class="btn btn-default btn-sm bookmark" (click)="removeBookMark()" *ngIf="isBookMarked">
+                    <span>
+                        <img style="width: 30px;" src="assets/images/10523-200.png"/>
+                        </span>
+                </button>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li *ngFor="let marking of bookMarkArray">
+                        <a (click)="goToMarkedPage()">Page {{marking}}</a>
+                    </li>
+                </ul>
+                </li>
+
+        </ul>
+    </div>
+</nav>
 <div class="container">
     <div class="row rowContainer">
         <div *ngIf="bookContent.length !==0">

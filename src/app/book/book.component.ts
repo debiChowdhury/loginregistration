@@ -17,6 +17,9 @@ export class BookComponent implements OnInit {
   divideContent: Array<any> = [];
   currentIndex = 0;
   status: boolean;
+  isBookMarked;
+  bookMarkArray = [];
+ 
   constructor(private _bookContent: BookContentService, private route: ActivatedRoute, private _router: Router, private loggedStatus: LoggedStatusService) { }
 
   ngOnInit() {
@@ -40,10 +43,43 @@ export class BookComponent implements OnInit {
     }
   }
   goPrevPage() {
-    this.currentIndex--;
-
+    this.currentIndex--; 
+    console.log(this.bookMarkArray);
+    for (let k = 0; k < this.bookMarkArray.length; k++) { 
+      if (this.bookMarkArray[k].bookMarked) {
+        console.log("marked");
+      
+      } else {
+        console.log("not marked");
+      }
+    }
   }
   goNextPage() {
     this.currentIndex++;
+    console.log(this.bookMarkArray);
+    for (let j = 0; j < this.bookMarkArray.length; j++){
+      if (this.bookMarkArray[j].index === this.currentIndex) {
+        console.log('marked');
+        this.isBookMarked = true;
+      } else {
+        console.log('not marked');
+        this.isBookMarked = false;
+      }
+    }
+    
+  }
+  addBookMark() {
+    this.isBookMarked = !this.isBookMarked
+    console.log(this.currentIndex);
+    this.bookMarkArray.push({ index: this.currentIndex, bookMarked: this.isBookMarked });
+    console.log(this.bookMarkArray);
+  }
+  removeBookMark() {
+    this.isBookMarked = !this.isBookMarked;
+    this.bookMarkArray.pop();
+  }
+  goToMarkedPage(index) {
+    console.log(index);
+    
   }
 }

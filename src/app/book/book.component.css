@@ -25,6 +25,24 @@
     margin: 0px !important;
 }
 
+.bookmark {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    outline: 0;
+}
+
+.bookmark:focus {
+    background-color: transparent;
+    outline: 0;
+    color: #b9b9b9;
+}
+
+.nav {
+    border-radius: 0;
+}
+
 @media (min-width: 768px) {
     .contentStyle {
         width: 40.666667%;
