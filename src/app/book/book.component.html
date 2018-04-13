@@ -13,15 +13,20 @@
                         <img style="width: 30px;" src="assets/images/10523-200.png"/>
                         </span>
                 </button>
+
             </li>
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li *ngFor="let marking of bookMarkArray">
-                        <a (click)="goToMarkedPage()">Page {{marking}}</a>
+                        <a (click)="goToMarkedPage(marking.index)">Page {{marking.index+1}}</a>
                     </li>
                 </ul>
-                </li>
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="margin-right: 95px;margin-top: 18px;font-size: 17px;">
+            <li><span>Page {{currentIndex +1}} of {{bookContent.length}}</span></li>
 
         </ul>
     </div>

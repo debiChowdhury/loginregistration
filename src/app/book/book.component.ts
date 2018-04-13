@@ -19,7 +19,7 @@ export class BookComponent implements OnInit {
   status: boolean;
   isBookMarked;
   bookMarkArray = [];
- 
+
   constructor(private _bookContent: BookContentService, private route: ActivatedRoute, private _router: Router, private loggedStatus: LoggedStatusService) { }
 
   ngOnInit() {
@@ -34,6 +34,7 @@ export class BookComponent implements OnInit {
         }
       }
     });
+
     //status = JSON.parse(sessionStorage.getItem('status'));
     status = this.loggedStatus.getSessionStorageItem();
     console.log(status);
@@ -42,44 +43,43 @@ export class BookComponent implements OnInit {
       alert('please login again')
     }
   }
+
   goPrevPage() {
-    this.currentIndex--; 
+    this.currentIndex--;
     console.log(this.bookMarkArray);
-    for (let k = 0; k < this.bookMarkArray.length; k++) { 
-      if (this.bookMarkArray[k].bookMarked) {
-        console.log("marked");
-      
-      } else {
-        console.log("not marked");
+    this.updateBookmarkStatus(this.currentIndex);
+  }
+
+  updateBookmarkStatus(index) {
+    this.isBookMarked = false;
+    for (let j = 0; j < this.bookMarkArray.length; j++) {
+      if (this.bookMarkArray[j].index === index) {
+        this.isBookMarked = true;
+        break;
       }
     }
   }
+
   goNextPage() {
     this.currentIndex++;
     console.log(this.bookMarkArray);
-    for (let j = 0; j < this.bookMarkArray.length; j++){
-      if (this.bookMarkArray[j].index === this.currentIndex) {
-        console.log('marked');
-        this.isBookMarked = true;
-      } else {
-        console.log('not marked');
-        this.isBookMarked = false;
-      }
-    }
-    
+    this.updateBookmarkStatus(this.currentIndex);
   }
+
   addBookMark() {
     this.isBookMarked = !this.isBookMarked
     console.log(this.currentIndex);
     this.bookMarkArray.push({ index: this.currentIndex, bookMarked: this.isBookMarked });
     console.log(this.bookMarkArray);
   }
+
   removeBookMark() {
     this.isBookMarked = !this.isBookMarked;
-    this.bookMarkArray.pop();
+    this.bookMarkArray.splice(this.currentIndex, 1);
   }
+
   goToMarkedPage(index) {
-    console.log(index);
-    
+    this.currentIndex = index;
+    this.updateBookmarkStatus(this.currentIndex);
   }
 }
