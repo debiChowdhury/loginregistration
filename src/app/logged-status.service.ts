@@ -8,6 +8,7 @@ interface UserInfo {
   activityType?: string
 }
 
+
 @Injectable()
 export class LoggedStatusService {
 
