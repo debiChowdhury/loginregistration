@@ -18,6 +18,7 @@ export class Act1Component implements OnInit {
   libraryOption = [];
   userName: string;
   status: boolean;
+  state;
   constructor(private _booklist: BookListService, private _router: Router, private routeName: ActivatedRoute, private loggedStatus: LoggedStatusService) { }
   ngOnInit() {
     //getting the value from the url using snapshot
@@ -34,7 +35,7 @@ export class Act1Component implements OnInit {
     // checked the logged status of the user
     status = this.loggedStatus.getSessionStorageItem();
     console.log(status);
-    if (status == 'false' || status== 'null') {
+    if (status === "false" || status === null) {
       this._router.navigateByUrl('/signin');
       alert('please login again')
     }
@@ -69,7 +70,8 @@ export class Act1Component implements OnInit {
     // status =  JSON.parse(sessionStorage.getItem('status'));
     status = this.loggedStatus.getSessionStorageItem();
     if (status) {
-      sessionStorage.setItem('status', 'false');
+      this.state = false;
+      sessionStorage.setItem('status', this.state);
       this._router.navigateByUrl('/signin');
       console.log('please login again to continue');
     } 

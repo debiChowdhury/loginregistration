@@ -23,6 +23,7 @@ export class Act2Component implements OnInit {
   bookAddedCount: number = 0;
   isCheckOutLoaded = false;
   status;
+  state;
   //@ViewChild('details') DetailsComponent: DetailsComponent;
   
 
@@ -33,7 +34,7 @@ export class Act2Component implements OnInit {
     this.getData();
     status = this.loggedStatus.getSessionStorageItem();
     console.log(status);
-    if (status == 'false' || status == 'null') {
+    if (status === 'false' || status === null) {
       this.route.navigateByUrl('/signin');
       alert('please login again')
     }
@@ -77,7 +78,8 @@ export class Act2Component implements OnInit {
   logOutButton() {
     this.status = this.loggedStatus.getSessionStorageItem();
     if (this.status) {
-      sessionStorage.setItem('status', 'false');
+      this.state = false;
+      sessionStorage.setItem('status', this.state);
       this.route.navigateByUrl('/signin');
       console.log('please login again to continue');
     } 

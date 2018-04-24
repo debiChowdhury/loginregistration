@@ -49,7 +49,7 @@ export class BookComponent implements OnInit {
     // for logged  in status
     status = this.loggedStatus.getSessionStorageItem();
     console.log(status);
-    if (status == 'false' || status == 'null') {
+    if (status === "false" || status === null) {
       this._router.navigateByUrl('/signin');
       alert('please login again')
     }
