@@ -78,7 +78,7 @@ export class Act2Component implements OnInit {
   logOutButton() {
     this.status = this.loggedStatus.getSessionStorageItem();
     if (this.status) {
-      this.state = false;
+      this.state = 'false';
       sessionStorage.setItem('status', this.state);
       this.route.navigateByUrl('/signin');
       console.log('please login again to continue');

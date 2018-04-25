@@ -12,7 +12,7 @@ import { LoggedStatusService } from './logged-status.service';
 export class AppComponent implements OnInit {
   loginEmail: string;
   loginPwd: string;
-  loggedInStatus: boolean = false;
+  loggedInStatus = 'false';
   status;
 
   constructor(private routeParamPath: Router, private userInformation: LoggedStatusService, private route: ActivatedRoute) { }
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
       if (condition) {
         //to navigate the  page using routeparam beased on the acivity 
         this.routeParamPath.navigate([userDetails[i].activityType, { username: userDetails[i].username }]);
-        this.loggedInStatus = true;
+        this.loggedInStatus = 'true';
         //sessionStorage.setItem('status', JSON.stringify(this.loggedInStatus));
         this.userInformation.setSessionStorageItem(this.loggedInStatus);
         break;

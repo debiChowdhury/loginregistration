@@ -17,7 +17,7 @@ export class Act1Component implements OnInit {
   visibleBookList: any[] = [];
   libraryOption = [];
   userName: string;
-  status: boolean;
+  status:any;
   state;
   constructor(private _booklist: BookListService, private _router: Router, private routeName: ActivatedRoute, private loggedStatus: LoggedStatusService) { }
   ngOnInit() {
@@ -35,7 +35,7 @@ export class Act1Component implements OnInit {
     // checked the logged status of the user
     status = this.loggedStatus.getSessionStorageItem();
     console.log(status);
-    if (status === "false" || status === null) {
+    if (status === 'false' || status === null) {
       this._router.navigateByUrl('/signin');
       alert('please login again')
     }
@@ -70,8 +70,7 @@ export class Act1Component implements OnInit {
     // status =  JSON.parse(sessionStorage.getItem('status'));
     status = this.loggedStatus.getSessionStorageItem();
     if (status) {
-      this.state = false;
-      sessionStorage.setItem('status', this.state);
+      sessionStorage.setItem('status', 'false');
       this._router.navigateByUrl('/signin');
       console.log('please login again to continue');
     } 

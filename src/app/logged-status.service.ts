@@ -18,7 +18,7 @@ export class LoggedStatusService {
   getLocalStorageItem() {
     return JSON.parse(window.localStorage.getItem('userInfoStorage'));
   }
-  setSessionStorageItem(status: Boolean) {
+  setSessionStorageItem(status: string) {
     sessionStorage.setItem('status', JSON.stringify(status));
   }
   getSessionStorageItem() {
