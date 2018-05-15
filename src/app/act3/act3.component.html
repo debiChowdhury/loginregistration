@@ -20,7 +20,7 @@
     <app-bug-edit (bugCreated)="onNewBugCreated($event)"></app-bug-edit>
     <section class="list">
         <ol>
-            <li *ngFor="let bug of ( bugList | sort:bugSortBy:bugSortDescendingOrder )" class="bug" (mouseenter)="showButton(bug)" (mouseleave)="hideButton()">
+            <li  *ngFor="let bug of ( bugList | sort:bugSortBy:bugSortDescendingOrder )" class="bug" (mouseenter)="showButton(bug)" (mouseleave)="hideButton()">
                 <span class="bugname" (click)='toggleBug(bug)' [ngClass]="{'closed': bug.isClosed}">{{bug.name | trimText: 25}}</span><br>
                 <div class="datetime">Created at : {{bug.createdTime}}</div>
                 <button class="remove-btn" *ngIf="hoveredBug && bug.showBtn" (click)=removeBug(bug)> <i class="fa fa-remove"></i> </button>

@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
-body {
+
+/* body {
     margin-left: 50px;
     overflow: hidden;
-}
+} */
 
 ::-webkit-scrollbar {
     width: 7px;
@@ -55,7 +56,7 @@ ol {
     -webkit-padding-start: 0px;
 }
 
-li {
+.bug {
     border-radius: 3px;
     margin-bottom: 10px;
     background-color: #cbefed;
