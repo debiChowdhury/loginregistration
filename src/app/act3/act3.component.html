@@ -1,3 +1,35 @@
-<p>
-  act3 works!
-</p>
+<div class="main-container">
+    <h1 style="display:inline-block">Bug Tracker</h1>
+    <span class="userName">Welcome {{userName[0].username}}</span>
+    <hr>
+    <section class="stats">
+        Bug Count (Closed / Total) :
+        <span class="closed">{{closedBug}}</span>
+        <span> / </span>
+        <span>{{bugList.length}}</span>
+    </section>
+    <section class="sort" style="font-size: 20px;padding: 15px 10px 5px 4px;">
+        <label for="">Order By :</label>
+        <select (change)="bugSortBy = $event.target.value" class="drop-down">
+    <option value="name">Name</option>
+    <option value="isClosed">Status</option>
+  </select>
+        <label for="" style="padding: 12px">Descending ? :</label>
+        <input type="checkbox" (change)="bugSortDescendingOrder=$event.target.checked">
+    </section>
+    <app-bug-edit (bugCreated)="onNewBugCreated($event)"></app-bug-edit>
+    <section class="list">
+        <ol>
+            <li *ngFor="let bug of ( bugList | sort:bugSortBy:bugSortDescendingOrder )" class="bug" (mouseenter)="showButton(bug)" (mouseleave)="hideButton()">
+                <span class="bugname" (click)='toggleBug(bug)' [ngClass]="{'closed': bug.isClosed}">{{bug.name | trimText: 25}}</span><br>
+                <div class="datetime">Created at : {{bug.createdTime}}</div>
+                <button class="remove-btn" *ngIf="hoveredBug && bug.showBtn" (click)=removeBug(bug)> <i class="fa fa-remove"></i> </button>
+
+                <button (click)="showBugDetails($event,bug)" class="show-details-btn">Show Details</button>
+
+            </li>
+        </ol>
+
+    </section>
+</div>
+<input type="button" class="remove-closed-btn" value="Remove Closed" (click)="removeClosedBugs()">

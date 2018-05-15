@@ -1,1 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin-left: 50px;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #afb3b3;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+section {
+    margin-bottom: 10px;
+}
+
+.stats,
+.bugname {
+    font-size: 18pt;
+}
+
+.closed {
+    color: red;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+.bugname {
+    cursor: pointer;
+}
+
+ol {
+    width: 500px;
+    list-style: none;
+    -webkit-padding-start: 0px;
+}
+
+li {
+    border-radius: 3px;
+    margin-bottom: 10px;
+    background-color: #cbefed;
+    padding: 5px;
+}
+
+.datetime {
+    display: inline-block;
+}
+
+.bug-name-input {
+    width: 30.5%;
+    font-size: 18px;
+    margin-left: 2rem;
+    border: none;
+    border-bottom: 3px solid #9fcecc;
+}
+
+.bug-name-input:focus {
+    outline: 0;
+    border-bottom: 3px solid #20847f;
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+.add-new-btn {
+    background-color: #ea8a74;
+    border: 0;
+    outline: 0;
+    margin-left: 3rem;
+    box-shadow: 2px 5px 8px 0px rgba(76, 75, 75, 0.6784313725490196);
+    height: 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-new-btn:active {
+    background-color: #e27056;
+}

@@ -17,6 +17,10 @@ import { BookComponent } from './book/book.component';
 import { LoggedStatusService } from './logged-status.service';
 import { DetailsComponent } from './act2/details/details.component';
 import { CheckoutComponent } from './act2/checkout/checkout.component';
+import { BugEditComponent } from './act3/bug-edit.component';
+import { TrimTextPipe } from './pipes/trim-text-pipes';
+import { SortPipe } from './pipes/sort-pipes';
+import { BugDetailsComponent } from './bug-details/bug-details.component';
 
 
 @NgModule({
@@ -29,7 +33,12 @@ import { CheckoutComponent } from './act2/checkout/checkout.component';
     Act3Component,
     BookComponent,
     DetailsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    BugEditComponent,
+    TrimTextPipe,
+    SortPipe,
+    BugDetailsComponent
+
   ],
   imports: [
     BrowserModule,
@@ -56,6 +65,8 @@ import { CheckoutComponent } from './act2/checkout/checkout.component';
       },
       {
         path: 'activity1/book', component: BookComponent
+      }, {
+        'path': ':id', component: BugDetailsComponent
       }
     ], )
   ],
